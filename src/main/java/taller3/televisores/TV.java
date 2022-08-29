@@ -32,9 +32,6 @@ public class TV {
 		this.precio = precio;
 	}
 
-	public void setVolumen1(int volumen) {
-		this.volumen = volumen;
-	}
 
 	public Marca getMarca() {
 		return marca;
@@ -54,7 +51,9 @@ public class TV {
 	
 	public static void setNumTV(int numTV) {
 		TV.numTV=numTV;
-	
+	}
+	public static int getNumTV() {
+		return TV.numTV;
 	}
 	public void turnOn() {
 		this.estado=true;
@@ -96,9 +95,12 @@ public class TV {
 		}
 	}
 	public void setVolumen(int volumen) {
-		if(estado==true && volumen <=7) {
+		if(estado==true && volumen <=7 && volumen > 0) {
 			this.volumen=volumen;
 		}
+	}
+	public int getVolumen() {
+		return volumen;
 	}
 }
 	
